@@ -185,7 +185,7 @@ def main():
     
     # Load data with error handling
     try:
-        df = load_and_process_data("data/tsla.csv")
+        df = load_and_process_data("llm_internship_starter/data/tsla.csv")
         
         if st.checkbox("Show data info", value=False):
             st.success("Data loaded successfully")
@@ -193,8 +193,9 @@ def main():
             st.write("Columns available:", df.columns.tolist())
             st.write("Date range:", f"{df['time'].min()} to {df['time'].max()}")
             
-    except FileNotFoundError:
+    except FileNotFoundError as e:
         st.error("❌ CSV file not found. Please ensure 'data/tsla.csv' exists.")
+        st.write(f"Error details: {e}")
         st.stop()
     except ValueError as e:
         st.error(f"❌ Data processing error: {e}")
