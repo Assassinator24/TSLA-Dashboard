@@ -528,7 +528,7 @@ def main():
     
     # Load data with error handling
     try:
-        df = load_and_process_data(os.getcwd() + "llm_internship_starter/data/tsla.csv")
+        df = load_and_process_data(os.getcwd() + "/llm_internship_starter/data/tsla.csv")
         
         # Calculate technical indicators
         with st.spinner("🧮 Calculating technical indicators..."):
