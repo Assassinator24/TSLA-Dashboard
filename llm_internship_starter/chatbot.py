@@ -47,6 +47,7 @@ Answer the following question about the dataset:
                 
                 # Generate response
                 response = model.generate_content(prompt)
+                print(f"Response: {response.text}")
                 return response.text
             else:
                 return f"No Gemini models available. Original error: {str(e)}"
