@@ -1,4 +1,5 @@
 streamlit
 pandas
-lightweight-charts-python
+plotly
+python-dotenv
 google-generativeai
